@@ -1,0 +1,79 @@
+<view class='container'>
+  <view class='header'>
+    <view class='searchbar'>
+      <icon class="searchcion" size='20' type='search'></icon>
+      <text class='text'>请输入商家、商品名称</text>
+    </view>
+  </view>
+  <swiper indicator-dots='true' interval='2000' duration='500' class='poster' circular='true' autoplay='true'>
+    <swiper-item>
+      <image src='../../images/takeaway/poster.png' />
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/takeaway/poster2.png'></image>
+    </swiper-item>
+  </swiper>
+  <swiper indicator-dots='true' interval='2000' duration='500' class='carousel' circular='true'>
+    <swiper-item>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/foods.png" mode="cover"></image>
+        <text>美食</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/market.png" mode="cover"></image>
+        <text>商超便利</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/fruit.png" mode="cover"></image>
+        <text>水果</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/hospital.png" mode="cover"></image>
+        <text>医药健康</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/foreign.png" mode="cover"></image>
+        <text>异国料理</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/snake.png" mode="cover"></image>
+        <text>地方小吃</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/malatang.png" mode="cover"></image>
+        <text>麻辣烫</text>
+      </view>
+      <view class='carousel-item'>
+        <image class="carousel-img" src="../../images/takeaway/fastfood.png" mode="cover"></image>
+        <text>素食简餐</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      2
+    </swiper-item>
+  </swiper>
+  <view class='filter-nav'>
+    <view bindtap='modalChange'>综合排序
+      <image src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+'
+        style='PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8'
+        class='triangle'></image>
+    </view>
+    <view>距离最近</view>
+    <view>品质联盟</view>
+    <view>筛选</view>
+  </view>
+  <view class='shop'>
+    <view wx:for='{{shops}}' class='shop-item'>
+      <view class='shop-info'>
+        <image src='{{item.img}}' class='shop-img'></image>
+        <p>{{item.name}}</p>
+        <p>{{item.name}}</p>
+
+      </view>
+    </view>
+  </view>
+
+</view>
+<modal confirm-text="" cancel-text="" hidden="{{modalHidden}}" no-cancel class='allmodal'>
+  这是对话框的内容。
+</modal>

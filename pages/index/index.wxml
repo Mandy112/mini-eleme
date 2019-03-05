@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<TakeAway wx:if="{{selectComponent==='takeAway'}}"></TakeAway>
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class='tabs'>
+  <view class='tab-item' bindtap="tabSelect" data-select='takeAway'>
+    <image class="tabs-img" src="../../images/tabs/home.png" mode="cover"></image>
+    <text class='tab-text'>外卖</text>
+  </view>
+  <view class='tab-item' bindtap="tabSelect" data-select='order'>
+    <image class="tabs-img" src="../../images/tabs/find.png" mode="cover"></image>
+    <text class='tab-text'>订单</text>
+  </view>
+  <view class='tab-item' bindtap="tabSelect" data-select='mine'>
+    <image class="tabs-img" src="../../images/tabs/mine.png" mode="cover"></image>
+    <text class='tab-text'>我的</text>
+  </view>
+</view>
